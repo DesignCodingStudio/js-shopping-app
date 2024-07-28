@@ -1,3 +1,48 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .stationary,
+  .grocery,
+  .fashion {
+    @apply flex items-center justify-start;
+  }
+  .stationary span,
+  .grocery span,
+  .fashion span {
+    @apply inline-block w-2 h-2 rounded-full mr-1;
+  }
+
+  .stationary {
+    @apply text-blue-600;
+  }
+  .stationary span {
+    @apply bg-blue-600;
+  }
+
+  .grocery {
+    @apply text-violet-600;
+  }
+  .grocery span {
+    @apply bg-violet-600;
+  }
+
+  .fashion {
+    @apply text-orange-600;
+  }
+  .fashion span {
+    @apply bg-orange-600;
+  }
+
+  .item-actions {
+    @apply text-sm flex items-center justify-start gap-1;
+  }
+
+  .edit-btn {
+    @apply bg-blue-50 border hover:bg-blue-200 border-blue-200 rounded text-white p-1 flex items-center justify-center;
+  }
+  .delete-btn {
+    @apply bg-red-50 border hover:bg-red-200 border-red-200 rounded text-white p-1 flex items-center justify-center;
+  }
+}
